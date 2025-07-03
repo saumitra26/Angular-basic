@@ -1,0 +1,22 @@
+.custom-navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.custom-navbar .nav-link {
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #00d8ff;
+}
+
+.custom-navbar .nav-link.active {
+  color: #00d8ff;
+  font-weight: 600;
+}
