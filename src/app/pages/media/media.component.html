@@ -1,0 +1,22 @@
+
+<div class="mat-scroll-container">
+  <div class="row-container" *ngFor="let row of filteredRows">
+    <h2 class="row-title">{{ row.header }}</h2>
+
+    <div class="row-scroll-wrapper">
+      <button mat-mini-fab color="primary" class="nav-button left" (click)="prevItems(row)">
+        &#8592;
+      </button>
+
+      <div class="card-scroll">
+        <mat-card class="media-card" *ngFor="let item of getCurrentItems(row)">
+          <img mat-card-image [src]="getPhotoUrl(item)" alt="{{ item.heading }}" />
+        </mat-card>
+      </div>
+
+      <button mat-mini-fab color="primary" class="nav-button right" (click)="nextItems(row)">
+        &#8594;
+      </button>
+    </div>
+  </div>
+</div>
