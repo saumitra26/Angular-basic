@@ -2,7 +2,10 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
 #It is a standalone project
+
+```bash
 #Also used angular materil for design
+```
 
 ## Development server
 
