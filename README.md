@@ -1,7 +1,8 @@
 # AllBasic
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
-it is a standalone project
+It is a standalone project
+Also used angular materil for design
 
 ## Development server
 
