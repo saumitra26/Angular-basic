@@ -1,22 +1,36 @@
-
 <div class="mat-scroll-container">
-  <div class="row-container" *ngFor="let row of filteredRows">
+  <div class="row-container" *ngFor="let row of filteredRows; let i = index">
     <h2 class="row-title">{{ row.header }}</h2>
-
+  
     <div class="row-scroll-wrapper">
-      <button mat-mini-fab color="primary" class="nav-button left" (click)="prevItems(row)">
-        &#8592;
-      </button>
+      <!-- LEFT ARROW -->
+      <div
+        *ngIf="isArrowVisible(i, 'left')"
+        class="timeline-arrow timeline-arrow-left"
+        (click)="scrollLeft(i)">
+        <img src="assets/audio_arrow_left.svg" alt="Left" />
+      </div>
 
-      <div class="card-scroll">
-        <mat-card class="media-card" *ngFor="let item of getCurrentItems(row)">
+      <!-- SCROLLING CARD LIST -->
+      <div class="card-scroll" #cardScroll>
+        <mat-card class="media-card" *ngFor="let item of row.data">
           <img mat-card-image [src]="getPhotoUrl(item)" alt="{{ item.heading }}" />
+          <mat-icon
+            class="media-icon"
+            matTooltip="Add to Library"
+            matTooltipPosition="right"
+            matTooltipClass="library-tooltip" >library_add
+          </mat-icon>
         </mat-card>
       </div>
 
-      <button mat-mini-fab color="primary" class="nav-button right" (click)="nextItems(row)">
-        &#8594;
-      </button>
+      <!-- RIGHT ARROW -->
+      <div
+        *ngIf="isArrowVisible(i, 'right')"
+        class="timeline-arrow timeline-arrow-right"
+        (click)="scrollRight(i)">
+        <img src="assets/audio_arrow_right.svg" alt="Right" />
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,22 @@
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+mat-form-field {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: bold;
+  border-radius: 4px;
+}
