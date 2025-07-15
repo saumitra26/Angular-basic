@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/">MyApp</a>
+    <a class="navbar-brand" routerLink="/">{{currentrole}}</a>
 
     <button
       class="navbar-toggler"
@@ -20,11 +20,15 @@
           <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+           <mat-icon
+            class="media-icon"
+            matTooltip="Add to Library"
+            matTooltipPosition="above"
+            matTooltipClass="library-tooltip" >library_add
+          </mat-icon>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<button mat-raised-button color="primary">Click me</button>
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+

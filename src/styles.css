@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family:  "Rubic", sans-serif; }
+:root {
+  --carousel-arrow-bg-grad-start: rgba(255, 255, 255, 0.1);
+  --carousel-arrow-bg-grad-end: rgba(255, 255, 255, 0);
+}

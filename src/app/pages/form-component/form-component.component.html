@@ -1,0 +1,72 @@
+<form #templateForm="ngForm" (ngSubmit)="submitForm(templateForm)">
+  <!-- Name Field -->
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      name="name"
+      ngModel
+      required
+      minlength="3"
+      #nameRef="ngModel"
+    />
+    <mat-error *ngIf="nameRef.errors?.['required']">
+      Name is required.
+    </mat-error>
+    <mat-error *ngIf="nameRef.errors?.['minlength']">
+      Name must be at least 3 characters long.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Email Field -->
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      name="email"
+      ngModel
+      required
+      email
+      #emailRef="ngModel"
+    />
+    <mat-error *ngIf="emailRef.errors?.['required']">
+      Email is required.
+    </mat-error>
+    <mat-error *ngIf="emailRef.errors?.['email']">
+      Please enter a valid email address.
+    </mat-error>
+  </mat-form-field>
+
+  <!-- Submit Button -->
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!templateForm.valid"
+  >
+    Submit
+  </button>
+</form>
+<!-- now reactive form -->
+
+<form [formGroup]="reactiveFormExample"  #formDirective="ngForm"  (ngSubmit)="submitReactiveForm(formDirective)">
+  <mat-form-field>
+    <mat-label>Input</mat-label>
+    <input matInput formControlName="input">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select formControlName="selection">
+      <mat-option value="one">First option</mat-option>
+      <mat-option value="two">Second option</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Textarea</mat-label>
+    <textarea matInput formControlName="textareaField"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Submit</button>
+</form>
