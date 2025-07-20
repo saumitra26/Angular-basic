@@ -22,4 +22,7 @@ export class JupitarService {
       })
     )
   }
+  getDepartment():Observable<any>{
+   return  this.http.get<any>('https://api.freeprojectapi.com/api/EmployeeApp/GetDepartments');
+  }
 }

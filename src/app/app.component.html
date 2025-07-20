@@ -1,2 +1,12 @@
+<!-- <h2>Parent Component</h2>
+    <app-data-sharing (bookTitleCreated)="onBookTitleReceived($event)"></app-data-sharing>
 
+    <p >Received Title: {{ receivedTitle }}</p>
+    <app-data-sharing [inputFromParent]="data" ></app-data-sharing > -->
+       {{loading$ |async}}
+        <ul>
+            @for(item of department$ | async; track $index){
+                <li> {{item.departmentName}}</li>
+            }
+        </ul>
 <router-outlet></router-outlet>

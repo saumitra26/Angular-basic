@@ -1,0 +1,7 @@
+<mat-form-field appearance="fill" class="full-width">
+  <mat-label>Write a title</mat-label>
+  <input matInput type="text" [(ngModel)]="bookTitle" />
+</mat-form-field>
+  <p>{{ inputFromParent }}</p>
+
+<button mat-raised-button color="primary" (click)="onAddTitle()">Add Title</button>
