@@ -4,10 +4,11 @@ import { Observable } from 'rxjs';
 import { decrement, increment, reset } from './store/counter.action';
 import { selectCount } from './store/counter.selector';
 import { CommonModule } from '@angular/common';
+import { HighlightDirective } from '../../services/highlight.directive';
 
 @Component({
   selector: 'app-counter',
-  imports: [CommonModule],
+  imports: [CommonModule,HighlightDirective],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.css'
 })
